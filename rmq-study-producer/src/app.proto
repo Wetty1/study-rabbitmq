@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package rabbitmq;
+
+service RabbitmqService {
+    rpc CreateQueue (Information) returns (Information);
+    rpc GetAllCreated (Null) returns (ArrayInformation) {};
+}
+
+message Null {}
+
+message Information {
+    int32 id = 1;
+    string message = 2;
+    string date = 3;
+}
+
+message ArrayInformation {
+    repeated Information informations = 1;
+}

@@ -1,0 +1,7 @@
+POST http://localhost:3000/nest
+Content-Type: application/json
+
+{
+    "id": 2,
+    "message": "informação que vai pra fila do primeiro server"
+}
